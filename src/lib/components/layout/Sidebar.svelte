@@ -561,10 +561,18 @@
 						aria-label={$showSidebar ? $i18n.t('Close Sidebar') : $i18n.t('Open Sidebar')}
 					>
 						<div class=" self-center flex items-center justify-center size-9">
-							<div class="sidebar-new-chat-icon size-6 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center group-hover:hidden">
-								<span class="text-white font-bold text-xs">AG</span>
+							<div class="sidebar-new-chat-icon size-12 flex items-center justify-center group-hover:hidden">
+								<img 
+									src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+									alt="Anadolu Grubu" 
+									class="w-[200px] h-auto dark:block hidden object-contain"
+								/>
+								<img 
+									src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+									alt="Anadolu Grubu" 
+									class="w-[200px] h-auto dark:hidden object-contain"
+								/>
 							</div>
-
 							<Sidebar className="size-5 hidden group-hover:flex" />
 						</div>
 					</button>
@@ -730,25 +738,25 @@
 			<div
 				class="sidebar px-2 pt-2 pb-1.5 flex justify-between space-x-1 text-gray-600 dark:text-gray-400 sticky top-0 z-10 -mb-3"
 			>
-				<a
-					class="flex items-center rounded-xl size-8.5 h-full justify-center hover:bg-gray-100/50 dark:hover:bg-gray-850/50 transition no-drag-region"
-					href="/"
-					draggable="false"
-					on:click={newChatHandler}
-				>
-					<div class="sidebar-new-chat-icon size-6 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
-						<span class="text-white font-bold text-xs">AG</span>
-					</div>
-				</a>
-
-				<a href="/" class="flex flex-1 px-1.5" on:click={newChatHandler}>
-					<div
-						id="sidebar-webui-name"
-						class=" self-center font-medium text-gray-850 dark:text-white font-primary"
-					>
-						Anadolu Grubu
-					</div>
-				</a>
+			<a
+				class="flex items-center rounded-xl h-full justify-center hover:bg-gray-100/50 dark:hover:bg-gray-850/50 transition no-drag-region"
+				href="/"
+				draggable="false"
+				on:click={newChatHandler}
+			>
+				<div class="w-full flex items-center justify-center">
+					<img 
+						src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg"
+						alt="Anadolu Grubu" 
+						class="w-[80px] h-full dark:block hidden object-contain"
+					/>
+					<img 
+						src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+						alt="Anadolu Grubu" 
+						class="w-[80px] h-auto dark:hidden object-contain"
+					/>
+				</div>
+			</a>				<!-- Logo zaten sol tarafta var, text'e gerek yok -->
 				<Tooltip
 					content={$showSidebar ? $i18n.t('Close Sidebar') : $i18n.t('Open Sidebar')}
 					placement="bottom"

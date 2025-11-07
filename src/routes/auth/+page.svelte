@@ -226,9 +226,16 @@
 						<div class=" sm:max-w-md my-auto pb-10 w-full dark:text-gray-100">
 							{#if $config?.metadata?.auth_logo_position === 'center'}
 								<div class="flex justify-center mb-6">
-									<div class="size-24 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
-										<span class="text-white font-bold text-5xl">AG</span>
-									</div>
+									<img 
+										src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+										alt="Anadolu Grubu" 
+										class="h-24 w-auto dark:block hidden"
+									/>
+									<img 
+										src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+										alt="Anadolu Grubu" 
+										class="h-24 w-auto dark:hidden"
+									/>
 								</div>
 							{/if}
 							<form
@@ -556,8 +563,17 @@
 		{#if !$config?.metadata?.auth_logo_position}
 			<div class="fixed m-10 z-50">
 				<div class="flex space-x-2">
-					<div class="self-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
-						<span class="text-white font-bold text-xs">AG</span>
+					<div class="self-center">
+						<img 
+							src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+							alt="Anadolu Grubu" 
+							class="h-6 w-auto dark:block hidden"
+						/>
+						<img 
+							src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+							alt="Anadolu Grubu" 
+							class="h-6 w-auto dark:hidden"
+						/>
 					</div>
 				</div>
 			</div>

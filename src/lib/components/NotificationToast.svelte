@@ -85,7 +85,16 @@
 	}}
 >
 	<div class="shrink-0 self-top -translate-y-0.5">
-		<img src="{WEBUI_BASE_URL}/static/favicon.png" alt="favicon" class="size-6 rounded-full" />
+		<img 
+			src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+			alt="Anadolu Grubu" 
+			class="h-6 w-auto dark:block hidden"
+		/>
+		<img 
+			src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+			alt="Anadolu Grubu" 
+			class="h-6 w-auto dark:hidden"
+		/>
 	</div>
 
 	<div>

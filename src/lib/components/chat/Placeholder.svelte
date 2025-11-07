@@ -70,6 +70,20 @@
 </script>
 
 <div class="m-auto w-full max-w-6xl px-2 @2xl:px-20 translate-y-6 py-24 text-center">
+	<!-- Anadolu Grubu Logo -->
+	<div class="flex justify-center mb-8">
+		<img 
+			src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+			alt="Anadolu Grubu" 
+			class="w-[300px] h-auto dark:block hidden object-contain"
+		/>
+		<img 
+			src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+			alt="Anadolu Grubu" 
+			class="w-[300px] h-auto dark:hidden object-contain"
+		/>
+	</div>
+
 	{#if $temporaryChatEnabled}
 		<Tooltip
 			content={$i18n.t("This chat won't appear in history and your messages will not be saved.")}

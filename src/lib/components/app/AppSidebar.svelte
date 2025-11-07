@@ -16,7 +16,7 @@
 
 		<Tooltip content="Home" placement="right">
 			<button
-				class=" cursor-pointer {selected === 'home' ? 'rounded-2xl' : 'rounded-full'} bg-gradient-to-br from-blue-600 to-blue-700 text-white font-bold flex items-center justify-center size-11"
+				class=" cursor-pointer {selected === 'home' ? 'rounded-2xl' : 'rounded-full'} flex items-center justify-center size-11"
 				on:click={() => {
 					selected = 'home';
 
@@ -25,7 +25,16 @@
 					}
 				}}
 			>
-				<span class="text-xl">AG</span>
+				<img 
+					src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+					alt="Anadolu Grubu" 
+					class="w-[80px] h-auto dark:block hidden object-contain"
+				/>
+				<img 
+					src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+					alt="Anadolu Grubu" 
+					class="w-[80px] h-auto dark:hidden object-contain"
+				/>
 			</button>
 		</Tooltip>
 	</div>
@@ -39,12 +48,21 @@
 			</div>
 		{/if}
 		<button
-			class=" cursor-pointer bg-gradient-to-br from-blue-600 to-blue-700 text-white font-bold flex items-center justify-center size-10 {selected === '' ? 'rounded-2xl' : 'rounded-full'}"
+			class=" cursor-pointer bg-transparent flex items-center justify-center size-10 {selected === '' ? 'rounded-2xl' : 'rounded-full'}"
 			on:click={() => {
 				selected = '';
 			}}
 		>
-			<span class="text-base">AG</span>
+			<img 
+				src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+				alt="Anadolu Grubu" 
+				class="w-[200px] h-auto dark:block hidden object-contain"
+			/>
+			<img 
+				src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+				alt="Anadolu Grubu" 
+				class="w-[200px] h-auto dark:hidden object-contain"
+			/>
 		</button>
 	</div>
 

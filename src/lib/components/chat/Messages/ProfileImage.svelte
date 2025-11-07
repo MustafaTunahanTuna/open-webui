@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { WEBUI_BASE_URL } from '$lib/constants';
 
-	export let className = 'size-8';
+	export let className = 'w-full';
 	export let src = `${WEBUI_BASE_URL}/static/favicon.png`;
 	
 	// Check if it's the default favicon/logo
@@ -12,8 +12,19 @@
 </script>
 
 {#if isDefaultLogo}
-	<div class="{className} rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
-		<span class="text-white font-bold" style="font-size: {className.includes('size-8') ? '0.75rem' : className.includes('size-5') ? '0.5rem' : '0.6rem'}">AG</span>
+	<div class="{className} w-[70px] flex items-center justify-center">
+		<img 
+			src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+			alt="Anadolu Grubu" 
+			class="{className} w-[70px] dark:block hidden"
+			draggable="false"
+		/>
+		<img 
+			src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+			alt="Anadolu Grubu" 
+			class="{className} w-[70px] dark:hidden"
+			draggable="false"
+		/>
 	</div>
 {:else}
 	<img

@@ -42,8 +42,17 @@
 	<div class="w-full h-screen max-h-[100dvh] text-white relative">
 		<div class="fixed m-10 z-50">
 			<div class="flex space-x-2">
-				<div class="self-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
-					<span class="text-white font-bold text-xs">AG</span>
+				<div class="self-center">
+					<img 
+						src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+						alt="Anadolu Grubu" 
+						classs="w-[80px] h-auto dark:block hidden object-contain"
+					/>
+					<img 
+					src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+					alt="Anadolu Grubu" 
+					class="w-[80px] h-auto dark:hidden object-contain"
+				/>
 				</div>
 			</div>
 		</div>

@@ -36,6 +36,20 @@
 
 {#key mounted}
 	<div class="m-auto w-full max-w-6xl px-8 lg:px-20">
+		<!-- Anadolu Grubu Logo -->
+		<div class="flex justify-center mb-8">
+			<img 
+				src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+				alt="Anadolu Grubu" 
+				class="w-[300px] h-auto dark:block hidden object-contain"
+			/>
+			<img 
+				src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+				alt="Anadolu Grubu" 
+				class="w-[300px] h-auto dark:hidden object-contain"
+			/>
+		</div>
+
 		<!-- Model logos section removed -->
 		<!--
 		<div class="flex justify-start">
