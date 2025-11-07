@@ -101,6 +101,8 @@
 					}}
 				/>
 			{:else}
+				<!-- Model logos section removed -->
+				<!--
 				<div class="flex flex-row justify-center gap-3 @sm:gap-3.5 w-fit px-5 max-w-xl">
 					<div class="flex shrink-0 justify-center">
 						<div class="flex -space-x-4 mb-0.5" in:fade={{ duration: 100 }}>
@@ -135,7 +137,9 @@
 							{/each}
 						</div>
 					</div>
-
+				</div>
+				-->
+				<div class="px-5 max-w-xl">
 					<div
 						class=" text-3xl @sm:text-3xl line-clamp-1 flex items-center"
 						in:fade={{ duration: 100 }}
@@ -150,8 +154,6 @@
 									{models[selectedModelIdx]?.name}
 								</span>
 							</Tooltip>
-						{:else}
-							{$i18n.t('Hello, {{name}}', { name: $user?.name })}
 						{/if}
 					</div>
 				</div>

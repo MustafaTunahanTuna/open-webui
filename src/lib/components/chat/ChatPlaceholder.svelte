@@ -36,6 +36,8 @@
 
 {#key mounted}
 	<div class="m-auto w-full max-w-6xl px-8 lg:px-20">
+		<!-- Model logos section removed -->
+		<!--
 		<div class="flex justify-start">
 			<div class="flex -space-x-4 mb-0.5" in:fade={{ duration: 200 }}>
 				{#each models as model, modelIdx}
@@ -70,6 +72,7 @@
 				{/each}
 			</div>
 		</div>
+		-->
 
 		{#if $temporaryChatEnabled}
 			<Tooltip
@@ -90,8 +93,6 @@
 				<div class=" capitalize line-clamp-1" in:fade={{ duration: 200 }}>
 					{#if models[selectedModelIdx]?.name}
 						{models[selectedModelIdx]?.name}
-					{:else}
-						{$i18n.t('Hello, {{name}}', { name: $user?.name })}
 					{/if}
 				</div>
 

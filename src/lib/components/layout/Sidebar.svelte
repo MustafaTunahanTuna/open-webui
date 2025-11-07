@@ -561,12 +561,9 @@
 						aria-label={$showSidebar ? $i18n.t('Close Sidebar') : $i18n.t('Open Sidebar')}
 					>
 						<div class=" self-center flex items-center justify-center size-9">
-							<img
-								crossorigin="anonymous"
-								src="{WEBUI_BASE_URL}/static/favicon.png"
-								class="sidebar-new-chat-icon size-6 rounded-full group-hover:hidden"
-								alt=""
-							/>
+							<div class="sidebar-new-chat-icon size-6 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center group-hover:hidden">
+								<span class="text-white font-bold text-xs">AG</span>
+							</div>
 
 							<Sidebar className="size-5 hidden group-hover:flex" />
 						</div>
@@ -739,12 +736,9 @@
 					draggable="false"
 					on:click={newChatHandler}
 				>
-					<img
-						crossorigin="anonymous"
-						src="{WEBUI_BASE_URL}/static/favicon.png"
-						class="sidebar-new-chat-icon size-6 rounded-full"
-						alt=""
-					/>
+					<div class="sidebar-new-chat-icon size-6 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
+						<span class="text-white font-bold text-xs">AG</span>
+					</div>
 				</a>
 
 				<a href="/" class="flex flex-1 px-1.5" on:click={newChatHandler}>
@@ -752,7 +746,7 @@
 						id="sidebar-webui-name"
 						class=" self-center font-medium text-gray-850 dark:text-white font-primary"
 					>
-						{$WEBUI_NAME}
+						Anadolu Grubu
 					</div>
 				</a>
 				<Tooltip
