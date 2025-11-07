@@ -52,16 +52,19 @@
 							)}
 							placement="right"
 						>
-							<img
-								crossorigin="anonymous"
-								src={model?.info?.meta?.profile_image_url ??
-									($i18n.language === 'dg-DG'
-										? `${WEBUI_BASE_URL}/doge.png`
-										: `${WEBUI_BASE_URL}/static/favicon.png`)}
-								class=" size-[2.7rem] rounded-full border-[1px] border-gray-100 dark:border-none"
-								alt="logo"
-								draggable="false"
-							/>
+							{#if model?.info?.meta?.profile_image_url}
+								<img
+									crossorigin="anonymous"
+									src={model?.info?.meta?.profile_image_url}
+									class=" size-[2.7rem] rounded-full border-[1px] border-gray-100 dark:border-none"
+									alt="logo"
+									draggable="false"
+								/>
+							{:else}
+								<div class="size-[2.7rem] rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center border-[1px] border-gray-100 dark:border-none">
+									<span class="text-white font-bold text-sm">AG</span>
+								</div>
+							{/if}
 						</Tooltip>
 					</button>
 				{/each}

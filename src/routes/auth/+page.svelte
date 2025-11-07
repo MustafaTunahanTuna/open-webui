@@ -213,7 +213,7 @@
 							class="flex items-center justify-center gap-3 text-xl sm:text-2xl text-center font-semibold dark:text-gray-200"
 						>
 							<div>
-								{$i18n.t('Signing in to {{WEBUI_NAME}}', { WEBUI_NAME: $WEBUI_NAME })}
+								{$i18n.t('Giriş yapılıyor...')}
 							</div>
 
 							<div>
@@ -226,13 +226,9 @@
 						<div class=" sm:max-w-md my-auto pb-10 w-full dark:text-gray-100">
 							{#if $config?.metadata?.auth_logo_position === 'center'}
 								<div class="flex justify-center mb-6">
-									<img
-										id="logo"
-										crossorigin="anonymous"
-										src="{WEBUI_BASE_URL}/static/favicon.png"
-										class="size-24 rounded-full"
-										alt=""
-									/>
+									<div class="size-24 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
+										<span class="text-white font-bold text-5xl">AG</span>
+									</div>
 								</div>
 							{/if}
 							<form
@@ -242,27 +238,18 @@
 									submitHandler();
 								}}
 							>
-								<div class="mb-1">
-									<div class=" text-2xl font-medium">
-										{#if $config?.onboarding ?? false}
-											{$i18n.t(`Get started with {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
-										{:else if mode === 'ldap'}
-											{$i18n.t(`Sign in to {{WEBUI_NAME}} with LDAP`, { WEBUI_NAME: $WEBUI_NAME })}
-										{:else if mode === 'signin'}
-											{$i18n.t(`Sign in to {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
-										{:else}
-											{$i18n.t(`Sign up to {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
-										{/if}
-									</div>
-
-									{#if $config?.onboarding ?? false}
-										<div class="mt-1 text-xs font-medium text-gray-600 dark:text-gray-500">
-											ⓘ {$WEBUI_NAME}
-											{$i18n.t(
-												'does not make any external connections, and your data stays securely on your locally hosted server.'
-											)}
-										</div>
-									{/if}
+				<div class="mb-1">
+					<div class=" text-2xl font-medium">
+						{#if $config?.onboarding ?? false}
+							{$i18n.t(`Yönetici Hesabı Oluşturun`)}
+						{:else if mode === 'ldap'}
+							{$i18n.t(`LDAP ile Giriş Yap`)}
+						{:else if mode === 'signin'}
+							{$i18n.t(`Giriş Yap`)}
+						{:else}
+							{$i18n.t(`Kayıt Ol`)}
+						{/if}
+					</div>
 								</div>
 
 								{#if $config?.features.enable_login_form || $config?.features.enable_ldap || form}
@@ -365,22 +352,20 @@
 												{$i18n.t('Authenticate')}
 											</button>
 										{:else}
-											<button
-												class="bg-gray-700/5 hover:bg-gray-700/10 dark:bg-gray-100/5 dark:hover:bg-gray-100/10 dark:text-gray-300 dark:hover:text-white transition w-full rounded-full font-medium text-sm py-2.5"
-												type="submit"
-											>
-												{mode === 'signin'
-													? $i18n.t('Sign in')
-													: ($config?.onboarding ?? false)
-														? $i18n.t('Create Admin Account')
-														: $i18n.t('Create Account')}
-											</button>
-
-											{#if $config?.features.enable_signup && !($config?.onboarding ?? false)}
+										<button
+											class="bg-gray-700/5 hover:bg-gray-700/10 dark:bg-gray-100/5 dark:hover:bg-gray-100/10 dark:text-gray-300 dark:hover:text-white transition w-full rounded-full font-medium text-sm py-2.5"
+											type="submit"
+										>
+											{mode === 'signin'
+												? $i18n.t('Giriş Yap')
+												: ($config?.onboarding ?? false)
+													? $i18n.t('Yönetici Hesabı Oluşturun')
+													: $i18n.t('Hesap Oluştur')}
+										</button>											{#if $config?.features.enable_signup && !($config?.onboarding ?? false)}
 												<div class=" mt-4 text-sm text-center">
 													{mode === 'signin'
-														? $i18n.t("Don't have an account?")
-														: $i18n.t('Already have an account?')}
+														? $i18n.t('Hesabın yok mu?')
+														: $i18n.t('Zaten bir hesabın var mı?')}
 
 													<button
 														class=" font-medium underline"
@@ -393,7 +378,7 @@
 															}
 														}}
 													>
-														{mode === 'signin' ? $i18n.t('Sign up') : $i18n.t('Sign in')}
+														{mode === 'signin' ? $i18n.t('Kayıt Ol') : $i18n.t('Giriş Yap')}
 													</button>
 												</div>
 											{/if}
@@ -549,8 +534,8 @@
 									>
 										<span
 											>{mode === 'ldap'
-												? $i18n.t('Continue with Email')
-												: $i18n.t('Continue with LDAP')}</span
+												? $i18n.t('E-posta ile Devam Et')
+												: $i18n.t('LDAP ile Devam Et')}</span
 										>
 									</button>
 								</div>
@@ -571,14 +556,8 @@
 		{#if !$config?.metadata?.auth_logo_position}
 			<div class="fixed m-10 z-50">
 				<div class="flex space-x-2">
-					<div class=" self-center">
-						<img
-							id="logo"
-							crossorigin="anonymous"
-							src="{WEBUI_BASE_URL}/static/favicon.png"
-							class=" w-6 rounded-full"
-							alt=""
-						/>
+					<div class="self-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
+						<span class="text-white font-bold text-xs">AG</span>
 					</div>
 				</div>
 			</div>

@@ -42,14 +42,8 @@
 	<div class="w-full h-screen max-h-[100dvh] text-white relative">
 		<div class="fixed m-10 z-50">
 			<div class="flex space-x-2">
-				<div class=" self-center">
-					<img
-						id="logo"
-						crossorigin="anonymous"
-						src="{WEBUI_BASE_URL}/static/favicon.png"
-						class=" w-6 rounded-full"
-						alt="logo"
-					/>
+				<div class="self-center w-6 h-6 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
+					<span class="text-white font-bold text-xs">AG</span>
 				</div>
 			</div>
 		</div>

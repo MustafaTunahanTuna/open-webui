@@ -16,7 +16,7 @@
 
 		<Tooltip content="Home" placement="right">
 			<button
-				class=" cursor-pointer {selected === 'home' ? 'rounded-2xl' : 'rounded-full'}"
+				class=" cursor-pointer {selected === 'home' ? 'rounded-2xl' : 'rounded-full'} bg-gradient-to-br from-blue-600 to-blue-700 text-white font-bold flex items-center justify-center size-11"
 				on:click={() => {
 					selected = 'home';
 
@@ -25,12 +25,7 @@
 					}
 				}}
 			>
-				<img
-					src="{WEBUI_BASE_URL}/static/splash.png"
-					class="size-11 dark:invert p-0.5"
-					alt="logo"
-					draggable="false"
-				/>
+				<span class="text-xl">AG</span>
 			</button>
 		</Tooltip>
 	</div>
@@ -44,17 +39,12 @@
 			</div>
 		{/if}
 		<button
-			class=" cursor-pointer bg-transparent"
+			class=" cursor-pointer bg-gradient-to-br from-blue-600 to-blue-700 text-white font-bold flex items-center justify-center size-10 {selected === '' ? 'rounded-2xl' : 'rounded-full'}"
 			on:click={() => {
 				selected = '';
 			}}
 		>
-			<img
-				src="{WEBUI_BASE_URL}/static/favicon.png"
-				class="size-10 {selected === '' ? 'rounded-2xl' : 'rounded-full'}"
-				alt="logo"
-				draggable="false"
-			/>
+			<span class="text-base">AG</span>
 		</button>
 	</div>
 
