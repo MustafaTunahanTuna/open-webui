@@ -14,13 +14,13 @@
 {#if isDefaultLogo}
 	<div class="{className} w-[70px] flex items-center justify-center">
 		<img 
-			src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+			src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-beyaz.svg" 
 			alt="Anadolu Grubu" 
 			class="{className} w-[70px] dark:block hidden"
 			draggable="false"
 		/>
 		<img 
-			src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+			src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-renkli.svg" 
 			alt="Anadolu Grubu" 
 			class="{className} w-[70px] dark:hidden"
 			draggable="false"

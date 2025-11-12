@@ -227,12 +227,12 @@
 							{#if $config?.metadata?.auth_logo_position === 'center'}
 								<div class="flex justify-center mb-6">
 									<img 
-										src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+										src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-beyaz.svg" 
 										alt="Anadolu Grubu" 
 										class="h-24 w-auto dark:block hidden"
 									/>
 									<img 
-										src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+										src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-renkli.svg" 
 										alt="Anadolu Grubu" 
 										class="h-24 w-auto dark:hidden"
 									/>
@@ -565,12 +565,12 @@
 				<div class="flex space-x-2">
 					<div class="self-center">
 						<img 
-							src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+							src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-beyaz.svg" 
 							alt="Anadolu Grubu" 
 							class="h-6 w-auto dark:block hidden"
 						/>
 						<img 
-							src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+							src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-renkli.svg" 
 							alt="Anadolu Grubu" 
 							class="h-6 w-auto dark:hidden"
 						/>

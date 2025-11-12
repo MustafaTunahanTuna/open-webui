@@ -26,12 +26,12 @@
 				}}
 			>
 				<img 
-					src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+					src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-beyaz.svg" 
 					alt="Anadolu Grubu" 
 					class="w-[80px] h-auto dark:block hidden object-contain"
 				/>
 				<img 
-					src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+					src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-renkli.svg" 
 					alt="Anadolu Grubu" 
 					class="w-[80px] h-auto dark:hidden object-contain"
 				/>
@@ -54,12 +54,12 @@
 			}}
 		>
 			<img 
-				src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+				src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-beyaz.svg" 
 				alt="Anadolu Grubu" 
 				class="w-[200px] h-auto dark:block hidden object-contain"
 			/>
 			<img 
-				src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+				src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-renkli.svg" 
 				alt="Anadolu Grubu" 
 				class="w-[200px] h-auto dark:hidden object-contain"
 			/>

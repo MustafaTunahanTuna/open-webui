@@ -86,12 +86,12 @@
 >
 	<div class="shrink-0 self-top -translate-y-0.5">
 		<img 
-			src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-beyaz.svg" 
+			src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-beyaz.svg" 
 			alt="Anadolu Grubu" 
 			class="h-6 w-auto dark:block hidden"
 		/>
 		<img 
-			src="{WEBUI_BASE_URL}/static/anadolu-grubu-tr-renkli.svg" 
+			src="{WEBUI_BASE_URL}/assets/svgs/anadolu-grubu-tr-renkli.svg" 
 			alt="Anadolu Grubu" 
 			class="h-6 w-auto dark:hidden"
 		/>
